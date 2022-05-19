@@ -3,6 +3,7 @@
     --secondary-color: #F5715F;
     --complementary-color: #F5B32F;
     --primary-color-hover: #2FB3BF;
+    --primary-color-hover-transparent: rgb(47, 179, 191, 0.5);
     --secondary-color-hover: #DB4D39;
     --complementary-color-hover: #D99C21;
     --highligth-color: #F3F3F3;
@@ -88,7 +89,8 @@ nav .checkbtn{
 
 @media (max-width: 1220px){
     nav li{
-        padding: 1rem 1.6rem 1rem 1.6rem;
+        font-size: 2rem;
+        padding: 1rem 1.4rem 1rem 1.4rem;
     }
 }
 
@@ -105,7 +107,7 @@ nav .checkbtn{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: var(--primary-color-hover);
+        background-color: var(--primary-color-hover-transparent);
         top: 10rem;
         left: -100%;
         display: list-item;
@@ -114,8 +116,8 @@ nav .checkbtn{
     }
 
     nav li{
-        margin: 5rem 0;
-        line-height: 3rem;
+        margin: 3rem 0;
+        line-height: 1rem;
         display: block;
         font-size: 2rem;
         padding: 1rem 2rem 1rem 2rem;
