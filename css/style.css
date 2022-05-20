@@ -63,6 +63,11 @@ nav a{
     text-shadow: 0.4rem 0.4rem 1rem var(--darktheme-color);
 }
 
+nav a:hover{
+    color: var(--secondary-color);
+    transition: all 100ms;
+    border-bottom: solid var(--secondary-color-hover);
+}
 
 nav li{
     list-style: none;
@@ -168,6 +173,7 @@ nav .checkbtn{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor:default;
 }
 
 .pie-pagina .grupo-1 .box h2{
@@ -202,6 +208,12 @@ nav .checkbtn{
     background-color: var(--highligth-color);
     text-align: center;
     transition: all 300ms;
+    box-shadow: 1rem 1rem 1rem var(--darktheme-color);
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    background-color: var(--primary-color-hover);
+    color: var(--complementary-color);
 }
 
 .pie-pagina .grupo-2{
