@@ -30,7 +30,7 @@ nav {
     justify-content: space-evenly;
     height: 10rem;
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
     z-index: 99;
     transition: background 0.5s ease;
 }
@@ -113,15 +113,15 @@ nav .checkbtn {
 
 .bienvenidos p {
     position: relative;
-    font-size: 3em;
+    font-size: 3rem;
     font-family: 'Quicksand';
     color: white;
     width: 50%;
     text-shadow:
-        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
-        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
-        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
-        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7;
+        0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color),
+        0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color),
+        0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color),
+        0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color), 0 0 2rem var(--complementary-color);
     text-align: center;
     top: 40%;
     left: 25%;
@@ -132,63 +132,59 @@ nav .checkbtn {
     background-image: url("/images/sectionmovies.jpg");
     background-position: center center;
     background-size: cover;
-    height: 115vh;
+    height: 100%;
     width: 100%;
+    padding-bottom: 5%;
     position: relative;
 }
 
 .peliculas::after {
     content: "";
     position: absolute;
-    height: 115vh;
+    height: 100%;
     width: 100%;
     background-color: var(--darktheme-color);
     opacity: 0.9;
 }
 
-.peliculas .content {
-    position: absolute;
-    z-index: 1;
-    width: inherit;
-    height: inherit;
-}
 
 .peliculas h1 {
     font-family: 'Quicksand';
-    font-size: 3.4em;
+    font-size: 3.4rem;
     color: white;
     text-align: center;
-    margin-top: 3%;
+    padding-top: 4%;
 }
 
 .peliculas .content .movies {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 26rem 26rem 26rem;
+    justify-content: space-evenly;
     margin-top: 5%;
-    gap: 10rem;
+}
 
+.peliculas .content .movies .column{
+    width: 26rem;
 }
 
 .peliculas .content .movies h2 {
     color: white;
-    font-size: 3em;
+    font-size: 3rem;
     font-family: 'Quicksand';
-    width: fit-content;
     padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: center;
     width: 26rem;
 }
 
-.peliculas .content .movies .lastweek h2 {
+#a1 h2 {
     background-color: var(--secondary-color-hover);
 }
 
-.peliculas .content .movies .premier h2 {
+#a2 h2 {
     background-color: var(--complementary-color-hover);
 }
 
-.peliculas .content .movies .coming_soon h2 {
+#a3 h2 {
     background-color: var(--primary-color-hover);
 }
 
@@ -316,6 +312,17 @@ nav .checkbtn {
         grid-template-columns: repeat(2);
         grid-gap: 3rem;
     }
+
+    .peliculas .content .movies{
+        grid-template-columns: 26rem 26rem;
+        gap: 5rem;
+    }
+
+    .peliculas {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 5%;
+    }
 }
 
 @media (max-width: 840px) {
@@ -351,20 +358,6 @@ nav .checkbtn {
     nav .bar-btn {
         display: block;
     }
-    .peliculas{
-        height: 110%;
-        align-items: center;
-        justify-content: center;
-    }
-    .peliculas .content .movies {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        justify-content: center;
-        margin-top: 5%;
-        gap: 3rem;
-    
-    }
 
     #check:checked~ul {
         left: 0;
@@ -378,5 +371,55 @@ nav .checkbtn {
         grid-gap: 3rem;
     }
 
+    
+    .bienvenidos p{
+        font-size: 2.4rem;
+    }
 
+    .peliculas .content .movies{
+        grid-template-columns: 20rem 20rem;
+        gap: 2rem;
+    }
+
+    .peliculas .content .movies .column{
+        width: 20rem;
+    }
+    
+    .peliculas .content .movies h2 {
+        width: 20rem;
+        font-size: 2rem;
+    }
+
+    
+    .peliculas .content .movies img {
+        height: 31rem;
+        width: 20rem;
+    }
+}
+
+@media (max-width: 520px){
+    
+    .bienvenidos p{
+        font-size: 2rem;
+    }
+
+    .peliculas .content .movies{
+        grid-template-columns: 20rem;
+        gap: 2rem;
+    }
+
+    .peliculas .content .movies .column{
+        width: 20rem;
+    }
+    
+    .peliculas .content .movies h2 {
+        width: 20rem;
+        font-size: 2rem;
+    }
+
+    
+    .peliculas .content .movies img {
+        height: 31rem;
+        width: 20rem;
+    }
 }
