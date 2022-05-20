@@ -11,45 +11,45 @@
     --darktheme-color: #283C47;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
 
 /* HEADER */
-nav{
+nav {
     background-color: var(--primary-color-transparent);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height:10rem;
+    height: 10rem;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     z-index: 99;
     transition: background 0.5s ease;
 }
 
-nav .logo{
+nav .logo {
     width: 20rem;
     padding: 1.5rem;
     text-align: center;
     width: 20%;
 }
 
-nav .logo h1{
+nav .logo h1 {
     color: var(--secondary-color);
     font-family: 'Pacifico', cursive;
     font-size: 3.6rem;
     line-height: 3rem;
 }
 
-nav ul{
+nav ul {
     align-items: center;
     display: inline-flex;
     height: 10rem;
@@ -57,19 +57,19 @@ nav ul{
     float: right;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--highligth-color);
     text-shadow: 0.4rem 0.4rem 1rem var(--darktheme-color);
 }
 
-nav a:hover{
+nav a:hover {
     color: var(--secondary-color);
     transition: all 100ms;
     border-bottom: solid var(--secondary-color-hover);
 }
 
-nav li{
+nav li {
     list-style: none;
     font-size: 2.4rem;
     font-family: 'Fredoka One', cursive;
@@ -77,13 +77,13 @@ nav li{
     padding: 1rem 4rem 1rem 4rem;
 }
 
-nav .bar{
+nav .bar {
     height: 10rem;
     width: 10%;
-    
+
 }
 
-nav .checkbtn{
+nav .checkbtn {
     font-size: 4rem;
     color: var(--complementary-color);
     font-weight: bold;
@@ -94,14 +94,14 @@ nav .checkbtn{
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
 
 /* MAIN */
 
 /*BIENVENIDOS*/
-.bienvenidos{
+.bienvenidos {
     background-image: url("/images/fondobienvenidos.jpg");
     background-position: center center;
     background-size: cover;
@@ -111,26 +111,96 @@ nav .checkbtn{
     z-index: -1;
 }
 
+.bienvenidos p {
+    position: relative;
+    font-size: 3em;
+    font-family: 'Quicksand';
+    color: white;
+    width: 50%;
+    text-shadow:
+        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
+        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
+        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7,
+        0 0 20px #ff9900d7, 0 0 20px #ff9900d7, 0 0 20px #ff9900d7;
+    text-align: center;
+    top: 40%;
+    left: 25%;
+}
+
 /*PELICULAS*/
-.peliculas{
+.peliculas {
     background-image: url("/images/sectionmovies.jpg");
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: 115vh;
     width: 100%;
+    position: relative;
 }
 
 .peliculas::after {
     content: "";
     position: absolute;
-    height:100vh;
-    width:100%;
-    background-color:var(--darktheme-color);
+    height: 115vh;
+    width: 100%;
+    background-color: var(--darktheme-color);
     opacity: 0.9;
 }
 
+.peliculas .content {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+}
+
+.peliculas h1 {
+    font-family: 'Quicksand';
+    font-size: 3.4em;
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.peliculas .content .movies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 10rem;
+
+}
+
+.peliculas .content .movies h2 {
+    color: white;
+    font-size: 3em;
+    font-family: 'Quicksand';
+    width: fit-content;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    text-align: center;
+    width: 26rem;
+}
+
+.peliculas .content .movies .lastweek h2 {
+    background-color: var(--secondary-color-hover);
+}
+
+.peliculas .content .movies .premier h2 {
+    background-color: var(--complementary-color-hover);
+}
+
+.peliculas .content .movies .coming_soon h2 {
+    background-color: var(--primary-color-hover);
+}
+
+.peliculas .content .movies img {
+    height: 37rem;
+    width: 26rem;
+}
+
+
+
 /*COMIDA*/
-.comida{
+.comida {
     background-image: url("/images/sectioncomida.jpg");
     background-position: center center;
     background-size: cover;
@@ -141,20 +211,20 @@ nav .checkbtn{
 .comida::after {
     content: "";
     position: absolute;
-    height:100vh;
-    width:100%;
-    background-color:var(--complementary-color);
+    height: 100vh;
+    width: 100%;
+    background-color: var(--complementary-color);
     opacity: 0.7;
 }
 
 /*FOOTER*/
-.pie-pagina{
+.pie-pagina {
     height: 100%;
     width: 100%;
     background-color: var(--darktheme-color);
 }
 
-.pie-pagina .grupo-1{
+.pie-pagina .grupo-1 {
     width: 100%;
     margin: auto;
     display: grid;
@@ -162,28 +232,28 @@ nav .checkbtn{
     grid-gap: 5rem;
 }
 
-.pie-pagina .grupo-1 .box{
+.pie-pagina .grupo-1 .box {
     justify-content: center;
     align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure{
+.pie-pagina .grupo-1 .box figure {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:default;
+    cursor: default;
 }
 
-.pie-pagina .grupo-1 .box h2{
+.pie-pagina .grupo-1 .box h2 {
     text-align: center;
     font-family: 'Fredoka One', cursive;
     font-size: 2.4rem;
     color: var(--complementary-color);
 }
 
-.pie-pagina .grupo-1 .box p{
+.pie-pagina .grupo-1 .box p {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
@@ -191,15 +261,15 @@ nav .checkbtn{
     margin-bottom: 1rem;
 }
 
-.pie-pagina .grupo-1 .red-social{
+.pie-pagina .grupo-1 .red-social {
     height: 80%;
     width: 100%;
-    display:inline-flex;
+    display: inline-flex;
     justify-content: space-evenly;
-    align-items:center;
+    align-items: center;
 }
 
-.pie-pagina .grupo-1 .red-social a{
+.pie-pagina .grupo-1 .red-social a {
     text-decoration: none;
     font-size: 2rem;
     color: var(--secondary-color);
@@ -211,12 +281,12 @@ nav .checkbtn{
     box-shadow: 1rem 1rem 1rem var(--darktheme-color);
 }
 
-.pie-pagina .grupo-1 .red-social a:hover{
+.pie-pagina .grupo-1 .red-social a:hover {
     background-color: var(--primary-color-hover);
     color: var(--complementary-color);
 }
 
-.pie-pagina .grupo-2{
+.pie-pagina .grupo-2 {
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -227,19 +297,19 @@ nav .checkbtn{
     text-align: center;
 }
 
-.pie-pagina .grupo-2 small{
+.pie-pagina .grupo-2 small {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
     color: var(--darktheme-color);
 }
 
-@media (max-width: 1220px){
-    nav li{
+@media (max-width: 1220px) {
+    nav li {
         font-size: 2rem;
         padding: 1rem 1.4rem 1rem 1.4rem;
     }
 
-    .pie-pagina .grupo-1{
+    .pie-pagina .grupo-1 {
         width: 100%;
         margin: auto;
         display: grid;
@@ -248,16 +318,16 @@ nav .checkbtn{
     }
 }
 
-@media (max-width: 840px){
-    nav .checkbtn{
+@media (max-width: 840px) {
+    nav .checkbtn {
         display: block;
     }
 
-    nav{
+    nav {
         justify-content: space-between;
     }
-    
-    nav ul{
+
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -269,7 +339,7 @@ nav .checkbtn{
         transition: .5s;
     }
 
-    nav li{
+    nav li {
         margin: 3rem 0;
         line-height: 1rem;
         display: block;
@@ -278,19 +348,35 @@ nav .checkbtn{
     }
 
 
-    nav .bar-btn{
+    nav .bar-btn {
         display: block;
     }
+    .peliculas{
+        height: 110%;
+        align-items: center;
+        justify-content: center;
+    }
+    .peliculas .content .movies {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        gap: 3rem;
+    
+    }
 
-    #check:checked ~ ul{
+    #check:checked~ul {
         left: 0;
     }
 
-    .pie-pagina .grupo-1{
+    .pie-pagina .grupo-1 {
         width: 100%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 3rem;
     }
+
+
 }

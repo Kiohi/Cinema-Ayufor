@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="CINEMA AYUFOR - LO MEJOR EN CINEMAS PARA NIÑOS EN NICARAGUA">
@@ -9,91 +10,121 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/5b764151b1.js" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
     <title>Cinemas AyuFor</title>
 </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo">
-                    <h1>
-                        Cinemas AyuFor
-                    </h1>
-                </div>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fa-solid fa-ticket"></i>
-                </label>
-                <ul>
-                    <li>
-                        <a class="active" href="#">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#">Cartelera</a>
-                    </li>
-                    <li>
-                        <a href="#">Próximamente</a>
-                    </li>
-                    <li>
-                        <a href="#">Productos</a>
-                    </li>
-                    <li>
-                        <a href="#">Entrar</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="bienvenidos">                
-            </section>
-            <section class="peliculas">            
-            </section>
-            <section class="comida">
 
-            </section>
-        </main>
-        <footer class="pie-pagina">
-            <div class="grupo-1">
-                <div class="box">
-                    <figure>
-                        <a href="#">
-                            <img src="./images/palomitas-de-maiz.png" alt="Logo de AyuFor">
-                        </a>
-                    </figure>
-                </div>
-                <div class="box">
-                    <h2>
-                        SOBRE NOSOTROS
-                    </h2>
-                    <p>Estamos ubicados en Nicaragua</p>
-                    <p>Somos el primer cine enfocados en niños del país</p>
-                    <p>Felicidad garantizada</p>
-                </div>
-                <div class="box">
-                    <h2>SIGUENOS</h2>
-                    <div class="red-social">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    Cinemas AyuFor
+                </h1>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-ticket"></i>
+            </label>
+            <ul>
+                <li>
+                    <a class="active" href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Cartelera</a>
+                </li>
+                <li>
+                    <a href="#">Próximamente</a>
+                </li>
+                <li>
+                    <a href="#">Productos</a>
+                </li>
+                <li>
+                    <a href="#">Entrar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bienvenidos">
+            <p class="text">
+                Disfruta de una experiencia única y personalizada, nos encontramos
+                localizados en los principales centros comerciales del país
+            </p>
+        </section>
+
+        <section class="peliculas">
+            <container class="content">
+                <h1>LAS MEJORES PELÍCULAS PARA NIÑOS</h1>
+                <div class="movies">
+                    <div class="lastweek">
+                        <h2>Última semana</h2>
+                        <img src="https://img.ecartelera.com/noticias/fotos/68300/68317/1.jpg" alt="Sonic 2">
+                        <!-- <button class="buy_ticket">Comprar entrada</button> -->
+                    </div>
+                    <div class="premier">
+                        <h2>Estrenos</h2>
+                        <img src="https://www.diariodevenusville.com/wp-content/uploads/2022/03/bad_guys_ver7.jpg" alt="Los tipos malos">
+                        <!-- <button class="buy_ticket">Comprar entrada</button> -->
+                    </div>
+                    <div class="coming_soon">
+                        <h2>Próximamente</h2>
+                        <img src="https://www.procinal.com/uploads/PELICULAS/kings%20regreso%20a%20casa%20360%20x%20500.jpg" alt="King">
+                        <!-- <button class="reservation">Reservar</button> -->
                     </div>
                 </div>
+
+            </container>
+        </section>
+        <section class="comida">
+
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./images/palomitas-de-maiz.png" alt="Logo de AyuFor">
+                    </a>
+                </figure>
             </div>
-            <div class="grupo-2">
-                <small>
-                    Todos los derechos reservados.
-                </small>
+            <div class="box">
+                <h2>
+                    SOBRE NOSOTROS
+                </h2>
+                <p>Estamos ubicados en Nicaragua</p>
+                <p>Somos el primer cine enfocados en niños del país</p>
+                <p>Felicidad garantizada</p>
             </div>
-        </footer>
-    </body>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>
+                Todos los derechos reservados.
+            </small>
+        </div>
+    </footer>
+</body>
+
 </html>
