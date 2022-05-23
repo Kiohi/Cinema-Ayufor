@@ -102,7 +102,7 @@ nav .checkbtn {
 
 /*BIENVENIDOS*/
 .bienvenidos {
-    background-image: url("/images/fondobienvenidos.jpg");
+    background-image: url("/assets/img/fondobienvenidos.jpg");
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -129,24 +129,29 @@ nav .checkbtn {
 
 /*PELICULAS*/
 .peliculas {
-    background-image: url("/images/sectionmovies.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/sectionmovies.jpg");
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     padding-bottom: 5%;
     position: relative;
 }
 
-.peliculas::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: var(--darktheme-color);
-    opacity: 0.9;
+.movies{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 26rem 26rem 26rem;
+    margin-top: 5%;
+    gap: 24px;
 }
 
+.movies::-webkit-scrollbar{
+    display: none;
+}
 
 .peliculas h1 {
     font-family: 'Quicksand';
@@ -156,15 +161,9 @@ nav .checkbtn {
     padding-top: 4%;
 }
 
-.peliculas .content .movies {
-    display: grid;
-    grid-template-columns: 26rem 26rem 26rem;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-
 .peliculas .content .movies .column{
     width: 26rem;
+    margin: 0 auto;
 }
 
 .peliculas .content .movies h2 {
@@ -176,15 +175,15 @@ nav .checkbtn {
     width: 26rem;
 }
 
-#a1 h2 {
+#column1 h2 {
     background-color: var(--secondary-color-hover);
 }
 
-#a2 h2 {
+#column2 h2 {
     background-color: var(--complementary-color-hover);
 }
 
-#a3 h2 {
+#column3 h2 {
     background-color: var(--primary-color-hover);
 }
 
@@ -193,11 +192,28 @@ nav .checkbtn {
     width: 26rem;
 }
 
+/*ARROWS*/
+.table-go-right{
+    position: absolute;
+    right: 0px;
+    padding: 15px;
+    margin-top: -240px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
 
+.table-go-left{
+    right: auto;
+    left: 0px;
+}
 
 /*COMIDA*/
 .comida {
-    background-image: url("/images/sectioncomida.jpg");
+    background-image: url("/assets/img/sectioncomida.jpg");
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -312,17 +328,6 @@ nav .checkbtn {
         grid-template-columns: repeat(2);
         grid-gap: 3rem;
     }
-
-    .peliculas .content .movies{
-        grid-template-columns: 26rem 26rem;
-        gap: 5rem;
-    }
-
-    .peliculas {
-        height: 100%;
-        width: 100%;
-        padding-bottom: 5%;
-    }
 }
 
 @media (max-width: 840px) {
@@ -375,25 +380,11 @@ nav .checkbtn {
     .bienvenidos p{
         font-size: 2.4rem;
     }
+}
 
-    .peliculas .content .movies{
-        grid-template-columns: 20rem 20rem;
-        gap: 2rem;
-    }
-
-    .peliculas .content .movies .column{
-        width: 20rem;
-    }
-    
-    .peliculas .content .movies h2 {
-        width: 20rem;
-        font-size: 2rem;
-    }
-
-    
-    .peliculas .content .movies img {
-        height: 31rem;
-        width: 20rem;
+@media (min-width: 840px){
+    .movies{
+        justify-content: center;
     }
 }
 
@@ -401,25 +392,5 @@ nav .checkbtn {
     
     .bienvenidos p{
         font-size: 2rem;
-    }
-
-    .peliculas .content .movies{
-        grid-template-columns: 20rem;
-        gap: 2rem;
-    }
-
-    .peliculas .content .movies .column{
-        width: 20rem;
-    }
-    
-    .peliculas .content .movies h2 {
-        width: 20rem;
-        font-size: 2rem;
-    }
-
-    
-    .peliculas .content .movies img {
-        height: 31rem;
-        width: 20rem;
     }
 }
