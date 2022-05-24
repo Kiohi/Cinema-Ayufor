@@ -28,7 +28,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 10rem;
+    height: 100px;
     width: 100%;
     position: fixed;
     z-index: 99;
@@ -140,12 +140,12 @@ nav .checkbtn {
 }
 
 .movies{
+    display: grid;
     overflow-x: auto;
     scroll-behavior: smooth;
-    margin: 0 auto; 
-    display: grid;
-    grid-template-columns: 26rem 26rem 26rem;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin: 0 auto;
+    grid-template-columns: 26rem 26rem 26rem 26rem 26rem 26rem;
     gap: 24px;
 }
 
@@ -162,7 +162,7 @@ nav .checkbtn {
 }
 
 .peliculas .content .movies .column{
-    width: 26rem;
+    width: auto;
     margin: 0 auto;
 }
 
@@ -375,10 +375,21 @@ nav .checkbtn {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 3rem;
     }
-
     
     .bienvenidos p{
         font-size: 2.4rem;
+    }
+
+    .peliculas h1 {
+        font-size: 2.4rem;
+    }
+
+    .peliculas .content .movies h2 {
+        font-size: 2rem;
+    }
+
+    .peliculas .content .movies .column{
+        padding: 0 20%;
     }
 }
 
@@ -390,7 +401,28 @@ nav .checkbtn {
 
 @media (max-width: 520px){
     
+    nav{
+        height: 60px;
+    }
+
+    nav .logo h1{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-top: -10px;
+    }
+
     .bienvenidos p{
         font-size: 2rem;
     }
+
+    nav .checkbtn {
+    font-size: 4rem;
+    line-height: 60px;
+    margin-right: 50px;
+    }
+
+    nav ul{
+        top: 60px;
+    }
+
 }
