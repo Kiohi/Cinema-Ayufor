@@ -108,11 +108,13 @@ nav .checkbtn {
     height: 100vh;
     width: 100%;
     top: -10rem;
+    display: flex;
+    align-items: center;
     z-index: -1;
 }
 
-.bienvenidos p {
-    position: relative;
+.bienvenidos .content p {
+    margin: 0 auto;
     font-size: 3rem;
     font-family: 'Quicksand';
     color: white;
@@ -127,6 +129,40 @@ nav .checkbtn {
     left: 25%;
 }
 
+.bienvenidos .content .botones{
+    display: grid;
+    height: 120px;
+    width: auto;
+    margin-top: 1%;
+    align-items: center;
+    grid-template-columns: repeat(2, 20%);
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.bienvenidos .content .botones a{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    justify-self: center;
+    border-radius: 10px;
+    border: solid var(--highligth-color);
+    box-shadow: 4px 4px 0 var(--secondary-color);
+    text-decoration: none;
+    text-shadow: none;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--highligth-color);
+    background-color: var(--secondary-color);
+}
+
+.bienvenidos .content .botones a:hover{
+    background-color: var(--secondary-color-hover);
+    box-shadow: 4px 4px 0 var(--secondary-color-hover);
+}
+
 /*PELICULAS*/
 .peliculas {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/sectionmovies.jpg");
@@ -135,8 +171,8 @@ nav .checkbtn {
     background-repeat: no-repeat;
     padding-bottom: 5%;
     position: relative;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 9%;
+    padding-right: 9%;
 }
 
 .movies{
@@ -453,6 +489,11 @@ nav .checkbtn {
     .comida .wrapper .columna-izquierda{
         order: 2;
     }
+
+    .bienvenidos .content .botones{
+        grid-template-columns: repeat(1, 20%);
+    }
+
 }
 
 @media (max-width: 840px) {
@@ -510,13 +551,9 @@ nav .checkbtn {
         min-width: 320px;
         row-gap: 20px;
     }
-
-    .comida .wrapper .columna-izquierda{
-        grid-template-columns: 1fr;
-    }
 }
 
-@media (max-width: 520px){
+@media (max-width: 540px){
     
     nav{
         height: 60px;
@@ -528,8 +565,13 @@ nav .checkbtn {
         margin-top: -10px;
     }
 
-    .bienvenidos p{
-        font-size: 2rem;
+    .bienvenidos .content p{
+        font-size: 2.2rem;
+        width: 60%;
+    }
+
+    .bienvenidos .content .botones{
+        margin: 50px;
     }
 
     nav .checkbtn {
@@ -540,5 +582,28 @@ nav .checkbtn {
 
     nav ul{
         top: 60px;
+    }
+
+    .comida .wrapper .columna-izquierda{
+        overflow-x: auto;
+        height: 260px;
+        width: 100%;
+        padding: 4%;
+        scroll-behavior: smooth;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .comida .wrapper .columna-izquierda::-webkit-scrollbar{
+        width: 12px;
+    }
+
+    .wrapper .columna-izquierda::-webkit-scrollbar-thumb{
+        background: linear-gradient(transparent, var(--primary-color));
+        border-radius: 6px;
+    }
+    
+    .wrapper .columna-izquierda::-webkit-scrollbar-thumb:hover{
+        background: linear-gradient(transparent, var(--primary-color-hover);
     }
 }
