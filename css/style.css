@@ -133,32 +133,44 @@ nav .checkbtn {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
     padding-bottom: 5%;
     position: relative;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 .movies{
     display: grid;
     overflow-x: auto;
     scroll-behavior: smooth;
-    margin-top: 10%;
-    margin: 0 auto;
-    grid-template-columns: 26rem 26rem 26rem 26rem 26rem 26rem;
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+    grid-template-columns: repeat(6, 260px);
     gap: 24px;
 }
 
 .movies::-webkit-scrollbar{
-    display: none;
+    width: 12px;
 }
 
-.peliculas h1 {
-    font-family: 'Quicksand';
-    font-size: 3.4rem;
-    color: white;
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, var(--secondary-color));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, var(--secondary-color-hover));
+}
+
+.peliculas h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.6rem;
+    line-height: 3rem;
     text-align: center;
     padding-top: 4%;
+    color: var(--highligth-color);
+    text-shadow: 5px 5px 5px var(--darktheme-color);
 }
 
 .peliculas .content .movies .column{
@@ -166,24 +178,24 @@ nav .checkbtn {
     margin: 0 auto;
 }
 
-.peliculas .content .movies h2 {
+.peliculas .content .movies h3 {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Quicksand';
     padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: center;
     width: 26rem;
 }
 
-#column1 h2 {
+.peliculas .content .movies .lastweek h3 {
     background-color: var(--secondary-color-hover);
 }
 
-#column2 h2 {
+.peliculas .content .movies .new h3 {
     background-color: var(--complementary-color-hover);
 }
 
-#column3 h2 {
+.peliculas .content .movies .next h3 {
     background-color: var(--primary-color-hover);
 }
 
@@ -200,7 +212,7 @@ nav .checkbtn {
     margin-top: -240px;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(var(--secondary-color), var(--secondary-color-hover));
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -213,20 +225,119 @@ nav .checkbtn {
 
 /*COMIDA*/
 .comida {
-    background-image: url("/assets/img/sectioncomida.jpg");
+    background-image: linear-gradient(rgba(255, 196, 0, 0.5),var(--complementary-color)), url("../assets/img/sectioncomida.jpg");
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
-.comida::after {
-    content: "";
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-color: var(--complementary-color);
-    opacity: 0.7;
+.comida h2{
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-top: 4%;
+    color: var(--highligth-color);
+    text-shadow: 5px 5px 5px var(--darktheme-color);
+}
+
+.comida .wrapper{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 5%;
+}
+
+.comida .wrapper .columna-derecha{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    justify-content: center;
+}
+
+.wrapper .columna-derecha .oferta{
+    min-width: 260px;
+    max-width: 500px;
+    padding: 10%;
+    justify-content: center;
+    font-family: 'Quicksand';
+    font-size: 2.2rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--highligth-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+.wrapper .columna-derecha .oferta img{
+    margin-top: 20px;
+}
+
+.wrapper .columna-derecha .call-to-action{
+    background-color: transparent;
+    margin: auto;
+}
+
+.call-to-action a{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid var(--highligth-color);
+    box-shadow: 4px 4px 0 var(--primary-color);
+    text-decoration: none;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--highligth-color);
+    background-color: var(--primary-color);
+}
+
+.call-to-action a:hover{
+    background-color: var(--primary-color-hover);
+    box-shadow: 4px 4px 0 var(--primary-color-hover);
+}
+
+.comida .wrapper .columna-izquierda{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.wrapper .columna-izquierda .combo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Quicksand';
+    width: 260px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border: solid 5px var(--highligth-color);
+    border-radius: 10px;
+}
+
+.wrapper .columna-izquierda .combo img{
+    margin: auto 0;
+    width: 130px;
+    height: 130px;
+}
+
+.columna-izquierda .combo--informacion{
+    align-self: center;
+    padding-left: 5px;
+}
+
+.combo--informacion h3{
+    color: var(--secondary-color);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.combo--informacion p{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 /*FOOTER*/
@@ -285,12 +396,14 @@ nav .checkbtn {
     text-decoration: none;
     font-size: 2rem;
     color: var(--secondary-color);
-    padding: 0.5rem;
+    padding: 1rem;
     width: 4rem;
+    height: 4rem;
     background-color: var(--highligth-color);
     text-align: center;
     transition: all 300ms;
-    box-shadow: 1rem 1rem 1rem var(--darktheme-color);
+    box-shadow: 2rem 2rem 2rem var(--darktheme-color);
+    border-radius: 30px;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover {
@@ -327,6 +440,18 @@ nav .checkbtn {
         display: grid;
         grid-template-columns: repeat(2);
         grid-gap: 3rem;
+    }
+
+    .comida .wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .comida .wrapper .columna-derecha{
+        order: 1;
+    }
+
+    .comida .wrapper .columna-izquierda{
+        order: 2;
     }
 }
 
@@ -380,22 +505,14 @@ nav .checkbtn {
         font-size: 2.4rem;
     }
 
-    .peliculas h1 {
-        font-size: 2.4rem;
+    .comida .wrapper{
+        grid-template-columns: 1fr;
+        min-width: 320px;
+        row-gap: 20px;
     }
 
-    .peliculas .content .movies h2 {
-        font-size: 2rem;
-    }
-
-    .peliculas .content .movies .column{
-        padding: 0 20%;
-    }
-}
-
-@media (min-width: 840px){
-    .movies{
-        justify-content: center;
+    .comida .wrapper .columna-izquierda{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -424,5 +541,4 @@ nav .checkbtn {
     nav ul{
         top: 60px;
     }
-
 }
