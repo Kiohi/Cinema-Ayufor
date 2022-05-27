@@ -32,7 +32,7 @@
             </label>
             <ul>
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="index.html">Inicio</a>
                 </li>
                 <li>
                     <a href="#">Cartelera</a>
@@ -44,9 +44,35 @@
                     <a href="#">Productos</a>
                 </li>
                 <li>
-                    <a href="#">Entrar</a>
+                    <a href="#" id="show-login" onclick="show()">Entrar</a>
                 </li>
+
             </ul>
+            <div class="popup">
+                <div class="close-btn" onclick="remove()">&times;</div>
+                <form method="post" action="/index.html" class="form">
+                    <h2>Inicio de sesión</h2>
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="form-element">
+                        <p></p>
+                    </div>
+                    <div class="form-element">
+                        <submit onclick="login()">Iniciar sesión</submit>
+                    </div>
+                    <div class="form-element">
+                        <h3 style="text-align: center;">
+                            <a href="register.html" style=" color: black">Registrarse</a>
+                        </h3>
+                    </div>
+                </form>
+            </div>
         </nav>
     </header>
     <main>
@@ -78,27 +104,32 @@
                     </div>
                     <div class="column new">
                         <h3>Estrenos</h3>
-                        <img src="https://www.diariodevenusville.com/wp-content/uploads/2022/03/bad_guys_ver7.jpg" alt="Los tipos malos Poster">
+                        <img src="https://www.diariodevenusville.com/wp-content/uploads/2022/03/bad_guys_ver7.jpg"
+                            alt="Los tipos malos Poster">
                         <!-- <button class="buy_ticket">Comprar entrada</button> -->
                     </div>
                     <div class="column next">
                         <h3>Próximamente</h3>
-                        <img src="https://www.procinal.com/uploads/PELICULAS/kings%20regreso%20a%20casa%20360%20x%20500.jpg" alt="King Poster">
+                        <img src="https://www.procinal.com/uploads/PELICULAS/kings%20regreso%20a%20casa%20360%20x%20500.jpg"
+                            alt="King Poster">
                         <!-- <button class="reservation">Reservar</button> -->
                     </div>
                     <div class="column next">
                         <h3>Próximamente</h3>
-                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/04/AFICHE_web_El-Pequeno-Ninja-1-278x416.jpg" alt="El pequeño ninja Poster">
+                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/04/AFICHE_web_El-Pequeno-Ninja-1-278x416.jpg"
+                            alt="El pequeño ninja Poster">
                         <!-- <button class="reservation">Reservar</button> -->
                     </div>
                     <div class="column new">
                         <h3>Estrenos</h3>
-                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/04/001_m-1-278x416.jpg" alt="Dog - Un Viaje salvaje Poster">
+                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/04/001_m-1-278x416.jpg"
+                            alt="Dog - Un Viaje salvaje Poster">
                         <!-- <button class="buy_ticket">Comprar entrada</button> -->
                     </div>
                     <div class="column next" id="column2">
                         <h3>Próximamente</h3>
-                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/05/LIGHTYEAR-POSTER-278x416.jpg" alt="LightYear Poster">
+                        <img src="https://media.cinemas.com.ni/wp-content/uploads/2022/05/LIGHTYEAR-POSTER-278x416.jpg"
+                            alt="LightYear Poster">
                         <!-- <button class="reservation">Reservar</button> -->
                     </div>
                 </div>
