@@ -149,6 +149,7 @@ nav .checkbtn {
    justify-content: center;
 
    display: grid;
+   grid-template-columns: 1fr;
    grid-template-rows: 1fr 1fr;
 }
 
@@ -162,18 +163,19 @@ nav .checkbtn {
 
 .sodas {
    display: grid;
-   overflow: auto;
+   overflow-x: auto;
    scroll-behavior: smooth;
    height: auto;
    width: 100%;
    margin-top: 5%;
-   /* grid-template-columns: repeat(2, auto); */
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
    transition: 0.5s ease;
    border: 1px solid black;
 }
 
 .sodas::-webkit-scrollbar {
-   width: 12px;
+   width: 1.2rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -188,11 +190,10 @@ nav .checkbtn {
 
 .individuales .sodas .column {
    width: 100%;
-   margin: 0 auto;
    display: grid;
    font-family: 'Quicksand';
    grid-template-columns: auto auto;
-   /* border: 1px solid red; */
+   border: 1px solid red;
    text-align: center;
 }
 
@@ -201,7 +202,8 @@ nav .checkbtn {
    flex-direction: column;
    justify-content: space-evenly;
    color: white;
-   font-size: 1.5rem;
+   font-size: 2rem;
+   border: 1px solid green;
 }
 
 .individuales .sodas .column .description h3 {
@@ -209,7 +211,7 @@ nav .checkbtn {
    font-size: 3rem;
    font-family: 'Quicksand';
    text-align: center;
-   width: 26rem;
+   width: 25rem;
 }
 
 .individuales .sodas img {
