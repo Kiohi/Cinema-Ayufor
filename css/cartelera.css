@@ -1,0 +1,258 @@
+:root {
+   --primary-color: #47E6F5;
+   --primary-color-transparent: rgb(71, 230, 245, 0.8);
+   --secondary-color: #F5715F;
+   --complementary-color: #F5B32F;
+   --primary-color-hover: #2FB3BF;
+   --primary-color-hover-transparent: rgb(47, 179, 191, 0.5);
+   --secondary-color-hover: #DB4D39;
+   --complementary-color-hover: #D99C21;
+   --highligth-color: #F3F3F3;
+   --darktheme-color: #283C47;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+
+/* HEADER */
+nav {
+   background-color: var(--primary-color-transparent);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   z-index: 99;
+   transition: background 0.5s ease;
+}
+
+nav .logo {
+   width: 20rem;
+   padding: 1.5rem;
+   text-align: center;
+   width: 20%;
+}
+
+nav .logo h1 {
+   color: var(--secondary-color);
+   font-family: 'Pacifico', cursive;
+   font-size: 3.6rem;
+   line-height: 3rem;
+}
+
+nav ul {
+   align-items: center;
+   display: inline-flex;
+   height: 10rem;
+   width: 70%;
+   float: right;
+}
+
+nav a {
+   text-decoration: none;
+   color: var(--highligth-color);
+   text-shadow: 0.4rem 0.4rem 1rem var(--darktheme-color);
+}
+
+nav a:hover {
+   color: var(--secondary-color);
+   transition: all 100ms;
+   border-bottom: solid var(--secondary-color-hover);
+}
+
+nav li {
+   list-style: none;
+   font-size: 2.4rem;
+   font-family: 'Fredoka One', cursive;
+   align-items: center;
+   padding: 1rem 4rem 1rem 4rem;
+}
+
+nav .bar {
+   height: 10rem;
+   width: 10%;
+
+}
+
+nav .checkbtn {
+   font-size: 4rem;
+   color: var(--complementary-color);
+   font-weight: bold;
+   float: right;
+   cursor: pointer;
+   line-height: 10rem;
+   margin-right: 5rem;
+   display: none;
+}
+
+#check {
+   display: none;
+}
+
+/* OVERVIEW */
+.overview {
+   background: linear-gradient(rgba(20, 60, 71, 0.3), rgba(20, 60, 71, 0.3)), url("../assets/img/overviewbackground.png");
+   background-position: top center;
+   background-size: cover;
+   height: 100vh;
+   width: 100%;
+   top: -10rem;
+   display: flex;
+   align-items: center;
+   z-index: -1;
+}
+
+.movies {
+   background: linear-gradient(rgba(245, 114, 95, 0.3), rgba(245, 114, 95, 0.3)), url("../assets/img/moviesbackground.png");
+   background-position: center center;
+   background-size: cover;
+   height: 100vh;
+   width: 100%;
+   top: -10rem;
+   display: flex;
+   align-items: center;
+   z-index: -1;
+}
+
+@media (max-width: 840px) {
+   nav .checkbtn {
+      display: block;
+   }
+
+   nav {
+      justify-content: space-between;
+   }
+
+   nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-color-hover-transparent);
+      top: 10rem;
+      left: -100%;
+      display: list-item;
+      text-align: center;
+      transition: .5s;
+   }
+
+   nav li {
+      margin: 3rem 0;
+      line-height: 1rem;
+      display: block;
+      font-size: 2rem;
+      padding: 1rem 2rem 1rem 2rem;
+   }
+
+
+   nav .bar-btn {
+      display: block;
+   }
+
+   #check:checked~ul {
+      left: 0;
+   }
+
+   .pie-pagina .grupo-1 {
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 3rem;
+   }
+
+   .bienvenidos p {
+      font-size: 2.4rem;
+   }
+
+   .comida .wrapper {
+      grid-template-columns: 1fr;
+      min-width: 320px;
+      row-gap: 20px;
+   }
+}
+
+@media (max-width: 540px) {
+
+   nav {
+      height: 60px;
+   }
+
+   nav .logo h1 {
+      font-size: 2rem;
+      line-height: 2.2rem;
+      margin-top: -10px;
+   }
+
+   .bienvenidos .content p {
+      font-size: 2.2rem;
+      width: 60%;
+   }
+
+   .bienvenidos .content .botones {
+      margin: 50px;
+   }
+
+   nav .checkbtn {
+      font-size: 4rem;
+      line-height: 60px;
+      margin-right: 50px;
+   }
+
+   nav ul {
+      top: 60px;
+   }
+}
+
+
+@media (max-width: 840px) {
+   nav .checkbtn {
+      display: block;
+   }
+
+   nav {
+      justify-content: space-between;
+   }
+
+   nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-color-hover-transparent);
+      top: 10rem;
+      left: -100%;
+      display: list-item;
+      text-align: center;
+      transition: .5s;
+   }
+
+   nav li {
+      margin: 3rem 0;
+      line-height: 1rem;
+      display: block;
+      font-size: 2rem;
+      padding: 1rem 2rem 1rem 2rem;
+   }
+
+
+   nav .bar-btn {
+      display: block;
+   }
+
+}
+
+
+@media (max-width: 1220px) {
+   nav li {
+      font-size: 2rem;
+      padding: 1rem 1.4rem 1rem 1.4rem;
+   }
+}

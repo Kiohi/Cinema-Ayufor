@@ -102,7 +102,7 @@ nav .checkbtn {
 
 /*BIENVENIDOS*/
 .bienvenidos {
-    background-image: url("/assets/img/fondobienvenidos.jpg");
+    background-image: url("../assets/img/fondobienvenidos.jpg");
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -129,7 +129,7 @@ nav .checkbtn {
     left: 25%;
 }
 
-.bienvenidos .content .botones{
+.bienvenidos .content .botones {
     display: grid;
     height: 120px;
     width: auto;
@@ -140,7 +140,7 @@ nav .checkbtn {
     justify-content: center;
 }
 
-.bienvenidos .content .botones a{
+.bienvenidos .content .botones a {
     width: 200px;
     height: 50px;
     padding: 10px;
@@ -158,7 +158,7 @@ nav .checkbtn {
     background-color: var(--secondary-color);
 }
 
-.bienvenidos .content .botones a:hover{
+.bienvenidos .content .botones a:hover {
     background-color: var(--secondary-color-hover);
     box-shadow: 4px 4px 0 var(--secondary-color-hover);
 }
@@ -175,7 +175,7 @@ nav .checkbtn {
     padding-right: 9%;
 }
 
-.movies{
+.movies {
     display: grid;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -187,16 +187,16 @@ nav .checkbtn {
     transition: 0.5s ease;
 }
 
-.movies::-webkit-scrollbar{
+.movies::-webkit-scrollbar {
     width: 12px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(transparent, var(--secondary-color));
     border-radius: 6px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(transparent, var(--secondary-color-hover));
 }
 
@@ -210,7 +210,7 @@ nav .checkbtn {
     text-shadow: 5px 5px 5px var(--darktheme-color);
 }
 
-.peliculas .content .movies .column{
+.peliculas .content .movies .column {
     width: auto;
     margin: 0 auto;
 }
@@ -242,7 +242,7 @@ nav .checkbtn {
 }
 
 /*ARROWS*/
-.table-go-right{
+.table-go-right {
     position: absolute;
     right: 0px;
     padding: 15px;
@@ -255,21 +255,21 @@ nav .checkbtn {
     border-radius: 20px;
 }
 
-.table-go-left{
+.table-go-left {
     right: auto;
     left: 0px;
 }
 
 /*COMIDA*/
 .comida {
-    background-image: linear-gradient(rgba(255, 196, 0, 0.5),var(--complementary-color)), url("../assets/img/sectioncomida.jpg");
+    background-image: linear-gradient(rgba(255, 196, 0, 0.5), var(--complementary-color)), url("../assets/img/sectioncomida.jpg");
     background-position: center center;
     background-size: cover;
     height: 100%;
     width: 100%;
 }
 
-.comida h2{
+.comida h2 {
     font-family: 'Fredoka One', cursive;
     font-size: 2.6rem;
     line-height: 3rem;
@@ -279,19 +279,19 @@ nav .checkbtn {
     text-shadow: 5px 5px 5px var(--darktheme-color);
 }
 
-.comida .wrapper{
+.comida .wrapper {
     display: grid;
     grid-template-columns: 60% 40%;
     padding: 5%;
 }
 
-.comida .wrapper .columna-derecha{
+.comida .wrapper .columna-derecha {
     display: grid;
     grid-template-rows: 80% 20%;
     justify-content: center;
 }
 
-.wrapper .columna-derecha .oferta{
+.wrapper .columna-derecha .oferta {
     min-width: 260px;
     max-width: 500px;
     padding: 10%;
@@ -305,16 +305,16 @@ nav .checkbtn {
     overflow: hidden;
 }
 
-.wrapper .columna-derecha .oferta img{
+.wrapper .columna-derecha .oferta img {
     margin-top: 20px;
 }
 
-.wrapper .columna-derecha .call-to-action{
+.wrapper .columna-derecha .call-to-action {
     background-color: transparent;
     margin: auto;
 }
 
-.call-to-action a{
+.call-to-action a {
     width: 200px;
     padding: 10px;
     border-radius: 10px;
@@ -328,12 +328,12 @@ nav .checkbtn {
     background-color: var(--primary-color);
 }
 
-.call-to-action a:hover{
+.call-to-action a:hover {
     background-color: var(--primary-color-hover);
     box-shadow: 4px 4px 0 var(--primary-color-hover);
 }
 
-.comida .wrapper .columna-izquierda{
+.comida .wrapper .columna-izquierda {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -341,7 +341,7 @@ nav .checkbtn {
     column-gap: 20px;
 }
 
-.wrapper .columna-izquierda .combo{
+.wrapper .columna-izquierda .combo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-family: 'Quicksand';
@@ -354,24 +354,24 @@ nav .checkbtn {
     border-radius: 10px;
 }
 
-.wrapper .columna-izquierda .combo img{
+.wrapper .columna-izquierda .combo img {
     margin: auto 0;
     width: 130px;
     height: 130px;
 }
 
-.columna-izquierda .combo--informacion{
+.columna-izquierda .combo--informacion {
     align-self: center;
     padding-left: 5px;
 }
 
-.combo--informacion h3{
+.combo--informacion h3 {
     color: var(--secondary-color);
     font-size: 2rem;
     text-align: center;
 }
 
-.combo--informacion p{
+.combo--informacion p {
     margin-top: 10px;
     font-size: 1.5rem;
     text-align: center;
@@ -466,87 +466,6 @@ nav .checkbtn {
 }
 
 
-.popup{
-    font-family: 'Quicksand', sans-serif;
-    position: absolute;
-    top: 30rem;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    width: 50rem;
-    height: 35rem;
-    padding: 2rem 3rem;
-    border-radius: 1rem;
-    background: #fff;
-    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
-    transition: top 0.1ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
-}
-
-.popup.active{
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.25);
-    transition: top 0.1ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
-}
-
-.popup .close-btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: #123afd;
-    color: #222;
-    text-align: center;
-    line-height: 50%;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    font-size: 4rem;
-}
-
-.popup .form h2{
-    text-align: center;
-    color: #222;
-    margin: 1rem 0rem 2rem;
-    font-size: 2.5rem;
-}
-
-.popup .form .form-element{
-    margin: 1.5rem 0rem;
-}
-
-.popup .form .form-element label{
-    font-size: 1.4rem;
-    color: #222
-}
-
-.popup .form .form-element input[type="text"],
-.popup .form .form-element input[type="password"]{
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    outline: none;
-    border: 1px solid #aaa;
-    border-radius: 0.05rem;
-}
-
-.popup .form .form-element submit{
-    padding: 0.5rem 10rem;
-    border:rgb(47, 179, 191, 0.5);
-    outline: none;
-    font-size: 2em;
-    background: #222;
-    color: #f5f5f5;
-    position: relative;
-    left: 14%;
-    transition: 0.2s ease;
-    cursor: pointer;
-}
-
-.popup .form .form-element submit:hover{
-    background: rgb(0, 0, 0);
-}
-
-
 @media (max-width: 1220px) {
     nav li {
         font-size: 2rem;
@@ -561,19 +480,19 @@ nav .checkbtn {
         grid-gap: 3rem;
     }
 
-    .comida .wrapper{
+    .comida .wrapper {
         grid-template-columns: 1fr;
     }
 
-    .comida .wrapper .columna-derecha{
+    .comida .wrapper .columna-derecha {
         order: 1;
     }
 
-    .comida .wrapper .columna-izquierda{
+    .comida .wrapper .columna-izquierda {
         order: 2;
     }
 
-    .bienvenidos .content .botones{
+    .bienvenidos .content .botones {
         grid-template-columns: repeat(1, 20%);
     }
 }
@@ -623,50 +542,50 @@ nav .checkbtn {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 3rem;
     }
-    
-    .bienvenidos p{
+
+    .bienvenidos p {
         font-size: 2.4rem;
     }
 
-    .comida .wrapper{
+    .comida .wrapper {
         grid-template-columns: 1fr;
         min-width: 320px;
         row-gap: 20px;
     }
 }
 
-@media (max-width: 540px){
-    
-    nav{
+@media (max-width: 540px) {
+
+    nav {
         height: 60px;
     }
 
-    nav .logo h1{
+    nav .logo h1 {
         font-size: 2rem;
         line-height: 2.2rem;
         margin-top: -10px;
     }
 
-    .bienvenidos .content p{
+    .bienvenidos .content p {
         font-size: 2.2rem;
         width: 60%;
     }
 
-    .bienvenidos .content .botones{
+    .bienvenidos .content .botones {
         margin: 50px;
     }
 
     nav .checkbtn {
-    font-size: 4rem;
-    line-height: 60px;
-    margin-right: 50px;
+        font-size: 4rem;
+        line-height: 60px;
+        margin-right: 50px;
     }
 
-    nav ul{
+    nav ul {
         top: 60px;
     }
 
-    .comida .wrapper .columna-izquierda{
+    .comida .wrapper .columna-izquierda {
         overflow-x: auto;
         height: 260px;
         width: 100%;
@@ -676,16 +595,16 @@ nav .checkbtn {
         grid-template-rows: 1fr;
     }
 
-    .comida .wrapper .columna-izquierda::-webkit-scrollbar{
+    .comida .wrapper .columna-izquierda::-webkit-scrollbar {
         width: 12px;
     }
 
-    .wrapper .columna-izquierda::-webkit-scrollbar-thumb{
+    .wrapper .columna-izquierda::-webkit-scrollbar-thumb {
         background: linear-gradient(transparent, var(--primary-color));
         border-radius: 6px;
     }
-    
-    .wrapper .columna-izquierda::-webkit-scrollbar-thumb:hover{
+
+    .wrapper .columna-izquierda::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(transparent, var(--primary-color-hover));
     }
 }
