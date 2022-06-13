@@ -150,7 +150,7 @@ nav .checkbtn {
 
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 1fr 1fr;
+   grid-template-rows: repeat(2, 1fr);
 }
 
 .individuales h2{
@@ -257,24 +257,6 @@ nav .checkbtn {
    #check:checked~ul {
       left: 0;
    }
-
-   .pie-pagina .grupo-1 {
-      width: 100%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 3rem;
-   }
-
-   .bienvenidos p {
-      font-size: 2.4rem;
-   }
-
-   .comida .wrapper {
-      grid-template-columns: 1fr;
-      min-width: 320px;
-      row-gap: 20px;
-   }
 }
 
 @media (max-width: 540px) {
@@ -308,44 +290,6 @@ nav .checkbtn {
       top: 60px;
    }
 }
-
-
-@media (max-width: 840px) {
-   nav .checkbtn {
-      display: block;
-   }
-
-   nav {
-      justify-content: space-between;
-   }
-
-   nav ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: var(--primary-color-hover-transparent);
-      top: 10rem;
-      left: -100%;
-      display: list-item;
-      text-align: center;
-      transition: .5s;
-   }
-
-   nav li {
-      margin: 3rem 0;
-      line-height: 1rem;
-      display: block;
-      font-size: 2rem;
-      padding: 1rem 2rem 1rem 2rem;
-   }
-
-
-   nav .bar-btn {
-      display: block;
-   }
-
-}
-
 
 @media (max-width: 1220px) {
    nav li {
