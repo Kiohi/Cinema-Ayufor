@@ -100,7 +100,7 @@ nav .checkbtn {
 
 /* OVERVIEW */
 .overview {
-   background: linear-gradient(rgba(20, 60, 71, 0.3), rgba(20, 60, 71, 0.3)), url("../assets/img/overviewbackground.png");
+   background: linear-gradient(rgba(20, 60, 71, 0.3), rgba(20, 60, 71, 0.3)), url("../assets/img/cartelera/overviewbackground.png");
    background-position: top center;
    background-size: cover;
    height: 100vh;
@@ -112,7 +112,7 @@ nav .checkbtn {
 }
 
 .movies {
-   background: linear-gradient(rgba(245, 114, 95, 0.3), rgba(245, 114, 95, 0.3)), url("../assets/img/moviesbackground.png");
+   background: linear-gradient(rgba(245, 114, 95, 0.3), rgba(245, 114, 95, 0.3)), url("../assets/img/cartelera/moviesbackground.png");
    background-position: center center;
    background-size: cover;
    height: 100vh;

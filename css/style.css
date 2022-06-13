@@ -102,7 +102,7 @@ nav .checkbtn {
 
 /*BIENVENIDOS*/
 .bienvenidos {
-    background-image: url("../assets/img/fondobienvenidos.jpg");
+    background-image: url("../assets/img/index/fondobienvenidos.jpg");
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -166,7 +166,7 @@ nav .checkbtn {
 
 /*PELICULAS*/
 .peliculas {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/sectionmovies.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/index/sectionmovies.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ nav .checkbtn {
 
 /*COMIDA*/
 .comida {
-    background-image: linear-gradient(rgba(255, 196, 0, 0.5), var(--complementary-color)), url("../assets/img/sectioncomida.jpg");
+    background-image: linear-gradient(rgba(255, 196, 0, 0.5), var(--complementary-color)), url("../assets/img/index/sectioncomida.jpg");
     background-position: center center;
     background-size: cover;
     height: 100%;

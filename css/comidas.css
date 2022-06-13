@@ -101,10 +101,11 @@ nav .checkbtn {
 /* CONFITERIA */
 
 .confiteria {
-   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../assets/img/confiteriabackground.png");
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/comidas/confiteriabackground.png");
    background-position: center center;
    background-size: cover;
-   height: 90vh;
+   height: auto;
+   padding: 15rem 3rem 10rem 3rem;
    width: 100%;
    top: -10rem;
    display: flex;
@@ -115,13 +116,13 @@ nav .checkbtn {
    z-index: -1;
 }
 
-.confiteria h2{
+.confiteria h2 {
    color: var(--secondary-color-hover);
    font-family: 'Quicksand';
    font-size: 3rem;
 }
 
-.confiteria p{
+.confiteria p {
    margin-top: 2rem;
    color: white;
    font-family: 'Quicksand';
@@ -129,8 +130,8 @@ nav .checkbtn {
    width: 25rem;
 }
 
-.confiteria p span{
-   color: var(--secondary-color-hover);
+.confiteria p span {
+   color: var(--primary-color);
    font-size: 2rem;
    font-family: 'Quicksand';
 }
@@ -139,21 +140,17 @@ nav .checkbtn {
 /* INDIVIDUALES */
 
 .individuales {
-   background: linear-gradient(rgba(40, 60, 71, 0.75), rgba(40, 60, 71, 0.75)), url("../assets/img/individualesbackground.png");
+   background: linear-gradient(rgba(40, 60, 71, 0.75), rgba(40, 60, 71, 0.75)), url("../assets/img/comidas/individualesbackground.png");
    background-position: center center;
    background-size: cover;
-   height: 110vh;
+   height: auto;
    width: 100%;
    top: -10rem;
-   padding: 0rem 3rem 0rem 3rem;
+   padding: 0rem 3rem 3rem 3rem;
    justify-content: center;
-
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: repeat(2, 1fr);
 }
 
-.individuales h2{
+.individuales h2 {
    font-family: 'Quicksand';
    color: white;
    font-size: 3rem;
@@ -161,20 +158,26 @@ nav .checkbtn {
    text-align: center;
 }
 
-.sodas {
+.individuales .content {
+   width: 100%;
+   height: auto;
+   overflow: auto;
+}
+
+.scroll-section {
    display: grid;
    overflow-x: auto;
    scroll-behavior: smooth;
    height: auto;
    width: 100%;
    margin-top: 5%;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 2rem;
+   grid-template-columns: repeat(2, auto);
+   gap: 24px;
    transition: 0.5s ease;
-   border: 1px solid black;
+   padding: 1rem 1rem 1rem 1rem;
 }
 
-.sodas::-webkit-scrollbar {
+.scroll-section::-webkit-scrollbar {
    width: 1.2rem;
 }
 
@@ -188,25 +191,25 @@ nav .checkbtn {
 }
 
 
-.individuales .sodas .column {
-   width: 100%;
+.individuales .scroll-section .column {
+   width: auto;
    display: grid;
    font-family: 'Quicksand';
    grid-template-columns: auto auto;
-   border: 1px solid red;
+
    text-align: center;
 }
 
-.individuales .sodas .column .description{
+.individuales .scroll-section .column .description {
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
    color: white;
    font-size: 2rem;
-   border: 1px solid green;
+
 }
 
-.individuales .sodas .column .description h3 {
+.individuales .scroll-section .column .description h3 {
    color: white;
    font-size: 3rem;
    font-family: 'Quicksand';
@@ -214,13 +217,83 @@ nav .checkbtn {
    width: 25rem;
 }
 
-.individuales .sodas img {
+.individuales .scroll-section img {
    height: auto;
    width: 15rem;
+   align-self: center;
+   margin: 0 auto 0 auto;
 }
 
+/* COMBOS */
 
-@media (max-width: 840px) {
+.combos {
+   background: url("../assets/img/comidas/combos_background.png");
+   background-position: center center;
+   background-size: cover;
+   height: auto;
+   width: 100%;
+   top: -10rem;
+   padding: 0rem 2rem 3rem 2rem;
+   justify-content: center;
+}
+
+.combos h2 {
+   font-family: 'Quicksand';
+   color: white;
+   font-size: 3rem;
+   padding: 3rem 1rem 0rem 1rem;
+   text-align: center;
+}
+
+.combos .content {
+   width: 100%;
+   height: auto;
+   overflow: auto;
+}
+
+.combos .scroll-section {
+   display: grid;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   height: auto;
+   width: 100%;
+   margin-top: 5%;
+   gap: 24px;
+   transition: 0.5s ease;
+   padding: 1rem 1rem 1rem 1rem;
+
+   grid-template-columns: repeat(2, auto);
+   grid-template-rows: repeat(2, auto);
+}
+
+.combos .scroll-section::-webkit-scrollbar {
+   width: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+   background: linear-gradient(transparent, var(--secondary-color));
+   border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(transparent, var(--secondary-color-hover));
+}
+
+.combos .scroll-section .element {
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 1rem;
+   padding: 2rem;
+   color: white;
+   font-size: 2rem;
+   font-family: 'Quicksand';
+   width: auto;
+   text-align: center;
+   float: right;
+   list-style-position: inside;
+   justify-content: center;
+}
+
+@media only screen and (max-width: 479px) {
    nav .checkbtn {
       display: block;
    }
@@ -257,43 +330,179 @@ nav .checkbtn {
    #check:checked~ul {
       left: 0;
    }
+
 }
 
-@media (max-width: 540px) {
+@media only screen and (min-width: 480px) and (max-width: 539px) {
+   nav .checkbtn {
+      display: block;
+   }
 
    nav {
-      height: 60px;
-   }
-
-   nav .logo h1 {
-      font-size: 2rem;
-      line-height: 2.2rem;
-      margin-top: -10px;
-   }
-
-   .bienvenidos .content p {
-      font-size: 2.2rem;
-      width: 60%;
-   }
-
-   .bienvenidos .content .botones {
-      margin: 50px;
-   }
-
-   nav .checkbtn {
-      font-size: 4rem;
-      line-height: 60px;
-      margin-right: 50px;
+      justify-content: space-between;
    }
 
    nav ul {
-      top: 60px;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-color-hover-transparent);
+      top: 10rem;
+      left: -100%;
+      display: list-item;
+      text-align: center;
+      transition: .5s;
+   }
+
+   nav li {
+      margin: 3rem 0;
+      line-height: 1rem;
+      display: block;
+      font-size: 2rem;
+      padding: 1rem 2rem 1rem 2rem;
+   }
+
+
+   nav .bar-btn {
+      display: block;
+   }
+
+   #check:checked~ul {
+      left: 0;
+   }
+
+   .confiteria h2 {
+      font-size: 4rem;
+   }
+
+   .confiteria p {
+      width: 40rem;
+      font-size: 2.5rem;
+   }
+
+   .confiteria p span {
+      font-size: 2.5rem;
+   }
+
+}
+
+@media only screen and (min-width: 540px) and (max-width: 839px) {
+   nav .checkbtn {
+      display: block;
+   }
+
+   nav {
+      justify-content: space-between;
+   }
+
+   nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-color-hover-transparent);
+      top: 10rem;
+      left: -100%;
+      display: list-item;
+      text-align: center;
+      transition: .5s;
+   }
+
+   nav li {
+      margin: 3rem 0;
+      line-height: 1rem;
+      display: block;
+      font-size: 2rem;
+      padding: 1rem 2rem 1rem 2rem;
+   }
+
+
+   nav .bar-btn {
+      display: block;
+   }
+
+   #check:checked~ul {
+      left: 0;
+   }
+
+}
+
+@media only screen and (min-width: 840px) and (max-width: 1219px) {
+   nav {
+      height: 100px;
+      justify-content: space-between;
+   }
+
+   nav .logo {
+      width: 20rem;
+   }
+
+   nav .logo h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+   }
+
+   nav ul {
+      align-items: center;
+      display: inline-flex;
+      height: 10rem;
+      width: auto;
+      float: right;
+   }
+
+   nav ul li {
+      list-style: none;
+      font-size: 2rem;
+      font-family: 'Fredoka One', cursive;
+      align-items: center;
+      padding: 1rem 2rem 1rem 2rem;
    }
 }
 
-@media (max-width: 1220px) {
-   nav li {
-      font-size: 2rem;
-      padding: 1rem 1.4rem 1rem 1.4rem;
+@media (min-width: 1220px) {
+   nav {
+      height: 100px;
+      align-items: center;
    }
+
+   nav .logo {
+      width: 20rem;
+
+   }
+
+   nav .logo h1 {
+      font-size: 3.6rem;
+      line-height: 3rem;
+   }
+
+   nav ul {
+      align-items: center;
+      display: inline-flex;
+      height: 10rem;
+      width: auto;
+      float: right;
+   }
+
+   nav ul li {
+      list-style: none;
+      font-size: 2.4rem;
+      font-family: 'Fredoka One', cursive;
+      align-items: center;
+      padding: 1rem 4rem 1rem 4rem;
+   }
+
+   .confiteria h2 {
+      font-size: 5rem;
+   }
+
+   .confiteria p,
+   .confiteria p span {
+      width: 55rem;
+      font-size: 3.5rem;
+   }
+
+   .individuales .scroll-section .column .description h3 {
+      text-align: center;
+      width: 100%;
+   }
+
 }
