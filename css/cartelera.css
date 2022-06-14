@@ -100,22 +100,117 @@ nav .checkbtn {
 
 /* OVERVIEW */
 .overview {
-   background: linear-gradient(rgba(20, 60, 71, 0.3), rgba(20, 60, 71, 0.3)), url("../assets/img/cartelera/overviewbackground.png");
+   background: linear-gradient(rgba(40, 60, 71, 0.5), rgba(40, 60, 71, 0.5)), url("../assets/img/cartelera/overviewbackground.png");
    background-position: top center;
    background-size: cover;
    height: 100vh;
+   padding: 6rem 2rem 6rem 2rem;
    width: 100%;
    top: -10rem;
    display: flex;
    align-items: center;
    z-index: -1;
 }
+
+.overview .content {
+   margin: auto;
+   width: auto;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+}
+
+.overview .content h2 {
+   color: var(--complementary-color-hover);
+   font-family: 'Quicksand';
+   font-weight: 700;
+   text-align: center;
+   width: auto;
+   font-size: 3rem;
+
+}
+
+.nav-tabs {
+   justify-content: space-evenly;
+}
+
+.nav .nav-item {
+   font-size: 2rem;
+}
+
+.nav .nav-item .nav-link,
+.nav .nav-item .nav-link.active {
+   color: white;
+   background-color: transparent;
+   border: none;
+   text-align: center;
+}
+
+.nav .nav-item .nav-link.active {
+   border-bottom: 0.3rem solid var(--secondary-color-hover);
+}
+
+.overview .content .tab-content .tab-pane {
+   display: flex;
+   margin-top: 1rem;
+   overflow: auto;
+}
+
+.overview .scroll-section {
+   display: grid;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   height: auto;
+   width: 100%;
+   grid-template-columns: repeat(5, auto);
+   gap: 1rem;
+   transition: 0.5s ease;
+}
+
+.overview .scroll-section::-webkit-scrollbar {
+   width: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+   background: linear-gradient(transparent, var(--secondary-color));
+   border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(transparent, var(--secondary-color-hover));
+}
+
+.overview .content .tab-content .tab-pane .dia {
+   font-family: 'Quicksand';
+   background-color: white;
+   width: fit-content;
+   padding: 1rem 2rem 1rem 2rem;
+}
+
+.overview .content .tab-content .tab-pane .dia h3 {
+   color: var(--primary-color);
+   font-size: 2rem;
+   font-family: 'Quicksand';
+   font-weight: 600;
+   text-align: center;
+}
+
+.overview .content .tab-content .tab-pane .dia p {
+   text-align: center;
+   font-size: 1.5rem;
+   font-family: 'Quicksand';
+}
+
+
+/* MOVIES */
 
 .movies {
-   background: linear-gradient(rgba(245, 114, 95, 0.3), rgba(245, 114, 95, 0.3)), url("../assets/img/cartelera/moviesbackground.png");
+   background: linear-gradient(rgba(245, 114, 95, 0.5), rgba(245, 114, 95, 0.5)), url("../assets/img/cartelera/moviesbackground.png");
    background-position: center center;
    background-size: cover;
-   height: 100vh;
+   height: auto;
+   padding: 5rem 2.5rem 5rem 2.5rem;
    width: 100%;
    top: -10rem;
    display: flex;
@@ -123,7 +218,83 @@ nav .checkbtn {
    z-index: -1;
 }
 
-@media (max-width: 840px) {
+.movies .content {
+   width: auto;
+   margin: auto;
+   height: auto;
+   justify-content: center;
+   overflow-x: auto;
+}
+
+.movies .content h2 {
+   text-align: center;
+   font-size: 3rem;
+   color: white;
+   margin-bottom: 2rem;
+   font-family: 'Quicksand';
+   font-weight: 600;
+}
+
+.movies .scroll-section {
+   display: grid;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   height: auto;
+   width: 100%;
+   grid-template-columns: repeat(3, auto);
+   gap: 1rem;
+   transition: 0.5s ease;
+}
+
+.movies .scroll-section::-webkit-scrollbar {
+   width: 1.2rem;
+}
+
+.movies ::-webkit-scrollbar-thumb {
+   background: linear-gradient(transparent, var(--primary-color));
+   border-radius: 6px;
+}
+
+.movies ::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(transparent, var(--primary-color-hover));
+}
+
+
+.movies .content .scroll-section .movie {
+   width: 25rem;
+   padding: 1rem;
+}
+
+.movies .content .scroll-section .movie h3 {
+   width: 100%;
+   font-family: 'Quicksand';
+   font-size: 2rem;
+   font-weight: 600;
+   color: white;
+   padding: 1rem 3rem 1rem 3rem;
+   text-align: center;
+   margin: 0;
+}
+
+.movies .content .scroll-section .movie h3.lastweek {
+   background-color: var(--secondary-color-hover);
+}
+
+.movies .content .scroll-section .movie img {
+   height: auto;
+   width: 100%;
+}
+
+.movies .content>h3 {
+   color: var(--primary-color);
+   text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
+   font-family: 'Quicksand';
+   text-align: center;
+   font-size: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+
    nav .checkbtn {
       display: block;
    }
@@ -161,59 +332,10 @@ nav .checkbtn {
       left: 0;
    }
 
-   .pie-pagina .grupo-1 {
-      width: 100%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 3rem;
-   }
-
-   .bienvenidos p {
-      font-size: 2.4rem;
-   }
-
-   .comida .wrapper {
-      grid-template-columns: 1fr;
-      min-width: 320px;
-      row-gap: 20px;
-   }
 }
 
-@media (max-width: 540px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 
-   nav {
-      height: 60px;
-   }
-
-   nav .logo h1 {
-      font-size: 2rem;
-      line-height: 2.2rem;
-      margin-top: -10px;
-   }
-
-   .bienvenidos .content p {
-      font-size: 2.2rem;
-      width: 60%;
-   }
-
-   .bienvenidos .content .botones {
-      margin: 50px;
-   }
-
-   nav .checkbtn {
-      font-size: 4rem;
-      line-height: 60px;
-      margin-right: 50px;
-   }
-
-   nav ul {
-      top: 60px;
-   }
-}
-
-
-@media (max-width: 840px) {
    nav .checkbtn {
       display: block;
    }
@@ -247,12 +369,40 @@ nav .checkbtn {
       display: block;
    }
 
+   #check:checked~ul {
+      left: 0;
+   }
+
 }
 
+@media only screen and (min-width: 1024px){
 
-@media (max-width: 1220px) {
-   nav li {
-      font-size: 2rem;
-      padding: 1rem 1.4rem 1rem 1.4rem;
+   .overview .content h2 {
+      font-size: 5rem;
    }
+   
+   .nav-tabs {
+      justify-content: space-evenly;
+   }
+   
+   .nav .nav-item {
+      font-size: 3rem;
+   }
+
+   .overview .content .tab-content .tab-pane .dia>h3 {
+      font-size: 3rem;
+   }
+   
+   .overview .content .tab-content .tab-pane .dia p{
+      font-size: 2.5rem;
+   }
+   
+   .movies .content{
+      overflow: hidden;
+   }
+
+   .movies .content>h3{
+      font-size: 3rem;
+   }
+
 }
