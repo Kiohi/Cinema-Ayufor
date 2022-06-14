@@ -102,7 +102,7 @@ nav .checkbtn {
 
 /*BIENVENIDOS*/
 .bienvenidos {
-   background-image: url("/assets/img/fondobienvenidos.jpg");
+   background-image: url("/assets/img/index/fondobienvenidos.jpg");
    background-position: center center;
    background-size: cover;
    height: 150vh;

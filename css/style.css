@@ -21,6 +21,14 @@ html {
     font-size: 62.5%;
 }
 
+nav ul li button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-shadow: 0.4rem 0.4rem 1rem var(--darktheme-color);
+    padding: 0;
+    margin: 0;
+}
 
 /* HEADER */
 nav {
@@ -63,7 +71,8 @@ nav a {
     text-shadow: 0.4rem 0.4rem 1rem var(--darktheme-color);
 }
 
-nav a:hover {
+nav a:hover,
+nav ul li button:hover{
     color: var(--secondary-color);
     transition: all 100ms;
     border-bottom: solid var(--secondary-color-hover);
@@ -96,6 +105,37 @@ nav .checkbtn {
 
 #check {
     display: none;
+}
+
+/* LOGIN */
+
+.modal-content{
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.modal-content .modal-header h5{
+    font-size: 3rem;
+    font-family: 'Fredoka One';
+}
+
+.modal-content .modal-body{
+    font-size: 2.5rem;
+    font-family: 'Quicksand';
+}
+
+.modal-content .modal-body input{
+    font-size: 2rem;
+    font-family: 'Quicksand';
+}
+
+.modal-content .modal-footer{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.modal-content .modal-footer button,
+.modal-content .modal-footer a{
+    font-size: 2rem;
 }
 
 /* MAIN */
@@ -171,7 +211,6 @@ nav .checkbtn {
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 5%;
-    position: relative;
     padding-left: 9%;
     padding-right: 9%;
 }
